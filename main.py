@@ -25,18 +25,7 @@ def show_result(size, lights, devices):
     result = result_calculate(size, lights, devices)
     return render_template('end.html', result=result)
 
-# 🆕 NUEVA RUTA: mostrar formulario
-@app.route('/form')
-def form():
-    return render_template('form.html')
+#TODO: crear ruta para mostar el formulario en pantalla
 
-# 🆕 NUEVA RUTA: procesar formulario
-@app.route('/form/submit', methods=['POST'])
-def submit_form():
-    name = request.form['name']
-    address = request.form['address']
-    date = request.form['date']
-    return render_template('form_result.html', name=name, address=address, date=date)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#TODO: crear una ruta para recibir (procesar) el formulario 
